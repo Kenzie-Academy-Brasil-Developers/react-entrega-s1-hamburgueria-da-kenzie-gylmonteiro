@@ -3,7 +3,6 @@ import Product from "../Product";
 
 const MenuContainer = ({ products, setProducts }) => {
   const [filteredProducts, setFilteredProducts] = useState([]);
-  const [currentSale, setCurrentSale] = useState([]);
   const [cartTotal, setCartTotal] = useState(0);
   const [itemSearch, setItemSearch] = useState("");
 
@@ -16,7 +15,7 @@ const MenuContainer = ({ products, setProducts }) => {
 
     setItemSearch("");
   };
-
+  console.log(filteredProducts);
   return (
     <>
       <input
@@ -27,7 +26,9 @@ const MenuContainer = ({ products, setProducts }) => {
       <button onClick={() => showProducts()}>Search</button>
 
       {filteredProducts.length > 0
-        ? filteredProducts.map((product) => <div>{product.name}</div>)
+        ? filteredProducts.map((product) => (
+            <Product key={product.id} product={product} />
+          ))
         : products.map((product) => (
             <Product key={product.id} product={product} />
           ))}
