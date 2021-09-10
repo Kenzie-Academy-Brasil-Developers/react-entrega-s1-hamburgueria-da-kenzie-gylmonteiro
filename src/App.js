@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { isDOMComponentElement } from "react-dom/test-utils";
 import "./App.css";
-import MenuConatiner from "./MenuContainer";
+import MenuContainer from "./components/MenuContainer";
 
 function App() {
   const [products, setProducts] = useState([
@@ -12,14 +13,16 @@ function App() {
     { id: 6, name: "Coca", category: "Bebidas", price: 4.99 },
     { id: 7, name: "Fanta", category: "Bebidas", price: 4.99 },
   ]);
+
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [currentSale, setCurrentSale] = useState([]);
   const [cartTotal, setCartTotal] = useState(0);
+  const [itemSearch, setItemSearch] = useState("");
 
   return (
     <div className="App">
       <header className="App-header">
-        <MenuConatiner products={products} setProducts={setProducts} />
+        <MenuContainer products={products} setProducts={setProducts} />
       </header>
     </div>
   );
