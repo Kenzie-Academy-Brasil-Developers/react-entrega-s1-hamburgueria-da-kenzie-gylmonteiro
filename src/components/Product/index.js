@@ -1,16 +1,18 @@
 import { useState } from "react";
-const Product = ({ product: { name, category, price } }) => {
+const Product = ({ product: { name, category, price }, addPrice }) => {
   const [currentSale, setCurrentSale] = useState([]);
-
-  const add = () => {
-    setCurrentSale([...currentSale, price]);
-  };
 
   return (
     <div>
       <p>{name}</p>
       <p>{price}</p>
-      <button onClick={() => add()}>Adicionar</button>
+      <button
+        onClick={() => {
+          addPrice();
+        }}
+      >
+        Adicionar
+      </button>
     </div>
   );
 };
