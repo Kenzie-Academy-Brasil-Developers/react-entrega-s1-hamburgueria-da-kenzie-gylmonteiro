@@ -1,0 +1,45 @@
+.Container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.total {
+  padding: 20px;
+  background-color: #bb2020;
+  color: #ffeb4d;
+}
+
+.carrinho {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 750px;
+}
+
+.carrinho button {
+  height: 50px;
+}
+
+.search {
+  padding: 20px;
+  display: flex;
+  width: 500px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input {
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  border: none;
+  opacity: 0.3;
+}
+
+.search button {
+  height: 50px;
+  color: #ddd;
+  font-size: 1.5rem;
+}

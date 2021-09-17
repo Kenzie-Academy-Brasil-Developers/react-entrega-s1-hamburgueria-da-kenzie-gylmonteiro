@@ -1,0 +1,24 @@
+.Card {
+  margin: 10px;
+  background-color: #bb2020;
+  padding: 10px;
+  min-width: 200px;
+  border-radius: 10px;
+}
+
+button {
+  background-color: #06111c;
+  padding: 10px;
+  color: #ffeb4d;
+  border-radius: 10px;
+  width: 150px;
+  border: none;
+}
+
+h2 {
+  background-color: #06111c;
+  padding: 5px;
+  border: none;
+  border-radius: 10px;
+  color: #bec7c7;
+}

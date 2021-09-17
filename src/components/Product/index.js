@@ -1,18 +1,14 @@
 import { useState } from "react";
-const Product = ({ product: { name, category, price }, addPrice }) => {
+import "./style.css";
+const Product = ({ product, addtoCart }) => {
   const [currentSale, setCurrentSale] = useState([]);
 
   return (
-    <div>
-      <p>{name}</p>
-      <p>{price}</p>
-      <button
-        onClick={() => {
-          addPrice();
-        }}
-      >
-        Adicionar
-      </button>
+    <div className="Card">
+      <img src={product.img} alt="" />
+      <h2>{product.name}</h2>
+      <p>{product.price}</p>
+      <button onClick={() => addtoCart(product)}>Adicionar</button>
     </div>
   );
 };
